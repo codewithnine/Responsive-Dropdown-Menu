@@ -1,4 +1,4 @@
-# Responsive-Dropdown-Menu
+# Responsive Dropdown Menu Using HTML + CSS + JQuery
 A Full-detailed 3 Mode Multi Level Responsive Dropdown Menu  - Menu sub-items won't go off the screen - Ready to use, especially for universities.
 
 # @media (max-width: 500px)
