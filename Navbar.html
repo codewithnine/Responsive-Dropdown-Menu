@@ -1,12 +1,13 @@
-<!DOCTYPE =html>
+<!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8" />
+        <!--        <link rel="stylesheet" href="/css/css.css" />-->
         <link rel="stylesheet" href="/css/css.css" />
+        <title>Responsive Dropdown Menu</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 
         <script>
             // dropdown menu on hover
@@ -26,99 +27,98 @@
 
             //Change position for drop down
             $(function() {
-                $(".nav-dropdown-menu-body li").on("mouseenter mouseleave", function(
-                                                   e
-                ) {
-                    if ($(".nav-dropdown-menu-submenu", this).length) {
-                        var elm = $(".nav-dropdown-menu-submenu", this);
-                        var off = elm.offset();
-                        var l = off.left;
-                        var w = elm.width();
-                        var docW = $(window).width();
+                $(".nav-dropdown-menu-body li").on(
+                    "mouseenter mouseleave",
+                    function(e) {
+                        if ($(".nav-dropdown-menu-submenu", this).length) {
+                            var elm = $(".nav-dropdown-menu-submenu", this);
+                            var off = elm.offset();
+                            var l = off.left;
+                            var w = elm.width();
+                            var docW = $(window).width();
 
-                        var isEntirelyVisible = l + w <= docW;
+                            var isEntirelyVisible = l + w <= docW;
 
-                        if (!isEntirelyVisible) {
-                            $(elm).addClass("nav-dropdown-reverse");
-                        } else {
-                            $(elm).removeClass("nav-dropdown-reverse");
+                            if (!isEntirelyVisible) {
+                                $(elm).addClass("nav-dropdown-reverse");
+                            } else {
+                                $(elm).removeClass("nav-dropdown-reverse");
+                            }
                         }
                     }
-                });
+                );
             });
         </script>
         <script
-            src="https://kit.fontawesome.com/0d8101b1a1.js"
-            crossorigin="anonymous"
-        ></script>
-
-        
+                src="https://kit.fontawesome.com/0d8101b1a1.js"
+                crossorigin="anonymous"
+                ></script>
     </head>
 
     <body>
         <div class="flex-nav-logo">
-            <img class="nav-logo" src="new.svga" alt="Logo" width="200px;" />
+            <img class="nav-logo" src="new.svga" alt="Logo" width="200" />
         </div>
         <nav>
             <!-- Start - nav - dropdown menu - body -->
             <div class="nav-dropdown-menu-body">
                 <!-- Start - nav - dropdown menu - toggle -->
                 <label for="tm" class="nav-dropdown-menu-toggle"
-                    >Menu
+                       >Menu
                     <span class="nav-dropdown-menu-dropicon">▾</span></label
-                >
+                    >
                 <input
-                    type="checkbox"
-                    id="tm"
-                    class="nav-dropdown-menu-toggle"
-                />
-                <!-- End --- nav - dropdown menu - toggle -->
+                       type="checkbox"
+                       id="tm"
+                       class="nav-dropdown-menu-toggle"
+                       />
+                <!-- End ___ nav - dropdown menu - toggle -->
                 <!-- Start - nav - dropdown menu - main -->
                 <ul class="nav-dropdown-menu-main cf">
                     <!-- Start - nav - dropdown menu - links -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-university"></i
+                           ><i class="fas fa-university"></i
                             ><span class="nav-dropdown-menu-text-after-icons">
-                                Home</span
+                            Home</span
                             ></a
-                        >
+                            >
                     </li>
 
-                    <!-- End --- nav - dropdown menu - links -->
+                    <!-- End ___ nav - dropdown menu - links -->
 
                     <!-- Start - nav - dropdown menu - About -->
                     <li class="nav-dropdown-menu-title-link darkerlishadow">
                         <a href="#"
-                            ><i class="fas fa-monument"></i
+                           ><i class="fas fa-monument"></i
                             ><span class="nav-dropdown-menu-text-after-icons">
-                                About</span
+                            About</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm00"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm00"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - About - Box -->
                         <input type="checkbox" id="sm00" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - About - Who We Are? -->
                             <li>
                                 <a href="#"
-                                    >Who We Are?
+                                   >Who We Are?
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm01"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm01"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - About - Who We Are? - Links -->
                                 <input type="checkbox" id="sm01" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -138,23 +138,23 @@
                                         <a href="#">Leadership</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - About - Who We Are? - Links -->
+                                <!-- End ___ nav - dropdown menu - About - Who We Are? - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - About - Who We Are? -->
+                            <!-- End ___ nav - dropdown menu - About - Who We Are? -->
                             <!-- Start - nav - dropdown menu - About - Achievements -->
                             <li>
                                 <a href="#"
-                                    >Achievements
+                                   >Achievements
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm02"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm02"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - About - Achievements - Links -->
                                 <input type="checkbox" id="sm02" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -169,31 +169,31 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Educational Effectiveness</a
-                                        >
+                                           >Educational Effectiveness</a
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Leadership</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - About - Achievements - Links -->
+                                <!-- End ___ nav - dropdown menu - About - Achievements - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - About - Achievements -->
+                            <!-- End ___ nav - dropdown menu - About - Achievements -->
 
                             <!-- Start - nav - dropdown menu - About - Reach Us -->
                             <li>
                                 <a href="#"
-                                    >Reach Us
+                                   >Reach Us
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm03"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm03"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - About - Reach Us - Links -->
                                 <input type="checkbox" id="sm03" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -210,808 +210,808 @@
                                         <a href="#">Hours Of Operation</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - About - Reach Us - Links -->
+                                <!-- End ___ nav - dropdown menu - About - Reach Us - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - About - Reach Us -->
+                            <!-- End ___ nav - dropdown menu - About - Reach Us -->
 
                             <!-- Start - nav - dropdown menu - About - Links -->
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - About - Links -->
+                            <!-- End ___ nav - dropdown menu - About - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - About - Box -->
+                        <!-- End ___ nav - dropdown menu - About - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - About -->
+                    <!-- End ___ nav - dropdown menu - About -->
 
                     <!-- Start - nav - dropdown menu - Student -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-user-tie"></i
+                           ><i class="fas fa-user-tie"></i
                             ><span class="nav-dropdown-menu-text-after-icons">
-                                Student</span
+                            Student</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm04"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm04"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Student - Box -->
                         <input type="checkbox" id="sm04" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - Student - Future Students -->
                             <li>
                                 <a href="#"
-                                    >Future Students
+                                   >Future Students
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm05"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm05"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Student - Future Students - Box -->
                                 <input type="checkbox" id="sm05" />
                                 <ul class="nav-dropdown-menu-submenu">
                                     <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs -->
                                     <li>
                                         <a href="#"
-                                            >Degree Programs
+                                           >Degree Programs
                                             <span
-                                                class="nav-dropdown-menu-drop-icon"
-                                                >▸</span
-                                            >
-                                            <label
-                                                title="Toggle Drop-down"
-                                                class="nav-dropdown-menu-drop-icon"
-                                                for="sm06"
-                                                >▾</label
-                                            >
+                                                  class="nav-dropdown-menu-drop-icon"
+                                                  >▸</span
+                                                >
                                         </a>
+                                        <label
+                                               title="Toggle Drop-down"
+                                               class="nav-dropdown-menu-drop-icon"
+                                               for="sm06"
+                                               >▾</label
+                                            >
                                         <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Box -->
                                         <input type="checkbox" id="sm06" />
                                         <ul class="nav-dropdown-menu-submenu">
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Higher Vocational Training -->
                                             <li>
                                                 <a href="#"
-                                                    >Higher Vocational Training
+                                                   >Higher Vocational Training
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm07"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm07"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Higher Vocational Training - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm07"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm07"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Higher Vocational Training - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Higher Vocational Training - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Higher Vocational Training -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Higher Vocational Training -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Domestic Co-Op Education -->
                                             <li>
                                                 <a href="#"
-                                                    >Domestic Co-Op Education
+                                                   >Domestic Co-Op Education
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm08"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm08"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Domestic Co-Op Education - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm08"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm08"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Domestic Co-Op Education - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Domestic Co-Op Education - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Domestic Co-Op Education -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Domestic Co-Op Education -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - International Co-Op Education -->
                                             <li>
                                                 <a href="#"
-                                                    >International Co-Op
+                                                   >International Co-Op
                                                     Education
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm09"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm09"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - International Co-Op Education - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm09"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm09"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- dropdown menu - Student - Future Students - Degree Programs - International Co-Op Education - Links -->
+                                                <!-- End ___ dropdown menu - Student - Future Students - Degree Programs - International Co-Op Education - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - International Co-Op Education -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - International Co-Op Education -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Undergraduate -->
                                             <li>
                                                 <a href="#"
-                                                    >Undergraduate
+                                                   >Undergraduate
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm10"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm10"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Undergraduate - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm10"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm10"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Undergraduate - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Undergraduate - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Undergraduate -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Undergraduate -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Graduate -->
                                             <li>
                                                 <a href="#"
-                                                    >Graduate
+                                                   >Graduate
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm11"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm11"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - Graduate - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm11"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm11"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Graduate - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Graduate - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Graduate -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Graduate -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - P.H.D. -->
                                             <li>
                                                 <a href="#"
-                                                    >P.H.D.
+                                                   >P.H.D.
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm12"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm12"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Degree Programs - P.H.D. - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm12"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm12"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - P.H.D. - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - P.H.D. - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - P.H.D. -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - P.H.D. -->
                                         </ul>
-                                        <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs - Box -->
+                                        <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs - Box -->
                                     </li>
-                                    <!-- End --- nav - dropdown menu - Student - Future Students - Degree Programs -->
+                                    <!-- End ___ nav - dropdown menu - Student - Future Students - Degree Programs -->
 
                                     <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs -->
                                     <li>
                                         <a href="#"
-                                            >Non-Degree Programs
+                                           >Non-Degree Programs
                                             <span
-                                                class="nav-dropdown-menu-drop-icon"
-                                                >▸</span
-                                            >
-                                            <label
-                                                title="Toggle Drop-down"
-                                                class="nav-dropdown-menu-drop-icon"
-                                                for="sm13"
-                                                >▾</label
-                                            >
+                                                  class="nav-dropdown-menu-drop-icon"
+                                                  >▸</span
+                                                >
                                         </a>
+                                        <label
+                                               title="Toggle Drop-down"
+                                               class="nav-dropdown-menu-drop-icon"
+                                               for="sm13"
+                                               >▾</label
+                                            >
                                         <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Box -->
                                         <input type="checkbox" id="sm13" />
                                         <ul class="nav-dropdown-menu-submenu">
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - 1st.Year Preparatory Program -->
                                             <li>
                                                 <a href="#"
-                                                    >1st.Year Preparatory
+                                                   >1st.Year Preparatory
                                                     Program
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm14"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm14"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - 1st.Year Preparatory Program - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm14"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm14"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - 1st.Year Preparatory Program - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - 1st.Year Preparatory Program - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - 1st.Year Preparatory Program -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - 1st.Year Preparatory Program -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Chinese Language Course -->
                                             <li>
                                                 <a href="#"
-                                                    >Chinese Language Course
+                                                   >Chinese Language Course
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm15"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm15"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Chinese Language Course - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm15"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm15"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Chinese Language Course - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Chinese Language Course - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Chinese Language Course -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Chinese Language Course -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Weekends - Evenings -->
                                             <li>
                                                 <a href="#"
-                                                    >Weekends - Evenings
+                                                   >Weekends - Evenings
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm16"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm16"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Weekends - Evenings - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm16"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm16"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Weekends - Evenings - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Weekends - Evenings - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Weekends - Evenings -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Weekends - Evenings -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Summer Programs -->
                                             <li>
                                                 <a href="#"
-                                                    >Summer Programs
+                                                   >Summer Programs
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm17"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm17"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Summer Programs - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm17"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm17"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Summer Programs - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Summer Programs - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Summer Programs -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Summer Programs -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Adult Programs -->
                                             <li>
                                                 <a href="#"
-                                                    >Adult Programs
+                                                   >Adult Programs
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm18"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm18"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Adult Programs - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm18"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm18"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Adult Programs - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Adult Programs - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Adult Programs -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Adult Programs -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Distance Education -->
                                             <li>
                                                 <a href="#"
-                                                    >Distance Education
+                                                   >Distance Education
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm19"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm19"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - Distance Education - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm19"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm19"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Distance Education - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Distance Education - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Distance Education -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Distance Education -->
 
                                             <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - On-line Education -->
                                             <li>
                                                 <a href="#"
-                                                    >On-line Education
+                                                   >On-line Education
                                                     <span
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        >▸</span
-                                                    >
-                                                    <label
-                                                        title="Toggle Drop-down"
-                                                        class="nav-dropdown-menu-drop-icon"
-                                                        for="sm20"
-                                                        >▾</label
-                                                    >
+                                                          class="nav-dropdown-menu-drop-icon"
+                                                          >▸</span
+                                                        >
                                                 </a>
+                                                <label
+                                                       title="Toggle Drop-down"
+                                                       class="nav-dropdown-menu-drop-icon"
+                                                       for="sm20"
+                                                       >▾</label
+                                                    >
                                                 <!-- Start - nav - dropdown menu - Student - Future Students - Non-Degree Programs - On-line Education - Links -->
                                                 <input
-                                                    type="checkbox"
-                                                    id="sm20"
-                                                />
+                                                       type="checkbox"
+                                                       id="sm20"
+                                                       />
                                                 <ul
                                                     class="nav-dropdown-menu-submenu"
-                                                >
+                                                    >
                                                     <li>
                                                         <a href="#">Overview</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Chinese - Medium</a
-                                                        >
+                                                           >Chinese - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Medium</a
-                                                        >
+                                                           >English - Medium</a
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >English - Chinese
+                                                           >English - Chinese
                                                             Medium</a
-                                                        >
+                                                            >
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            >Apply - Application
+                                                           >Apply - Application
                                                             Status</a
-                                                        >
+                                                            >
                                                     </li>
                                                 </ul>
-                                                <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - On-line Education - Links -->
+                                                <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - On-line Education - Links -->
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - On-line Education -->
+                                            <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - On-line Education -->
                                         </ul>
-                                        <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs - Box -->
+                                        <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs - Box -->
                                     </li>
-                                    <!-- End --- nav - dropdown menu - Student - Future Students - Non-Degree Programs -->
+                                    <!-- End ___ nav - dropdown menu - Student - Future Students - Non-Degree Programs -->
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Student - Future Students - Box -->
+                                <!-- End ___ nav - dropdown menu - Student - Future Students - Box -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Student - Future Students -->
+                            <!-- End ___ nav - dropdown menu - Student - Future Students -->
 
                             <!-- Start - nav - dropdown menu - Student - Current Students -->
                             <li>
                                 <a href="#"
-                                    >Current Students
+                                   >Current Students
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm21"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm21"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Student - Current Students - Box -->
                                 <input type="checkbox" id="sm21" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1024,29 +1024,29 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Master Schedule Of Classes</a
-                                        >
+                                           >Master Schedule Of Classes</a
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Course Catalog</a>
                                     </li>
-                                    <!-- End --- nav - dropdown menu - Student - Current Students - Links -->
+                                    <!-- End ___ nav - dropdown menu - Student - Current Students - Links -->
 
                                     <!-- Start - nav - dropdown menu - Student - Recreation -->
                                     <li>
                                         <a href="#"
-                                            >Recreation
+                                           >Recreation
                                             <span
-                                                class="nav-dropdown-menu-drop-icon"
-                                                >▸</span
-                                            >
-                                            <label
-                                                title="Toggle Drop-down"
-                                                class="nav-dropdown-menu-drop-icon"
-                                                for="sm22"
-                                                >▾</label
-                                            >
+                                                  class="nav-dropdown-menu-drop-icon"
+                                                  >▸</span
+                                                >
                                         </a>
+                                        <label
+                                               title="Toggle Drop-down"
+                                               class="nav-dropdown-menu-drop-icon"
+                                               for="sm22"
+                                               >▾</label
+                                            >
                                         <!-- Start - nav - dropdown menu - Student - Recreation - Box -->
                                         <input type="checkbox" id="sm22" />
                                         <ul class="nav-dropdown-menu-submenu">
@@ -1069,34 +1069,33 @@
                                             <li>
                                                 <a href="#">Contact</a>
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Recreation - Links -->
+                                            <!-- End ___ nav - dropdown menu - Student - Recreation - Links -->
                                         </ul>
-                                        <!-- End --- nav - dropdown menu - Student - Recreation - Box -->
+                                        <!-- End ___ nav - dropdown menu - Student - Recreation - Box -->
                                     </li>
                                     <!-- Start - nav - dropdown menu - Student - Opportunities -->
                                     <li>
                                         <a href="#"
-                                            >Opportunities
+                                           >Opportunities
                                             <span
-                                                class="nav-dropdown-menu-drop-icon"
-                                                >▸</span
-                                            >
-                                            <label
-                                                title="Toggle Drop-down"
-                                                class="nav-dropdown-menu-drop-icon"
-                                                for="sm23"
-                                                >▾</label
-                                            >
+                                                  class="nav-dropdown-menu-drop-icon"
+                                                  >▸</span
+                                                >
                                         </a>
-
+                                        <label
+                                               title="Toggle Drop-down"
+                                               class="nav-dropdown-menu-drop-icon"
+                                               for="sm23"
+                                               >▾</label
+                                            >
                                         <!-- Start - nav - dropdown menu - Student - Opportunities - Box -->
                                         <input type="checkbox" id="sm23" />
                                         <ul class="nav-dropdown-menu-submenu">
                                             <!-- Start - nav - dropdown menu - Student - Opportunities - Links -->
                                             <li>
                                                 <a href="#"
-                                                    >Employment Opportunities</a
-                                                >
+                                                   >Employment Opportunities</a
+                                                    >
                                             </li>
                                             <li>
                                                 <a href="#">Internship</a>
@@ -1105,58 +1104,58 @@
                                             <li>
                                                 <a href="#">Contact</a>
                                             </li>
-                                            <!-- End --- nav - dropdown menu - Student - Opportunities - Links -->
+                                            <!-- End ___ nav - dropdown menu - Student - Opportunities - Links -->
                                         </ul>
-                                        <!-- End --- nav - dropdown menu - Student - Opportunities - Box -->
+                                        <!-- End ___ nav - dropdown menu - Student - Opportunities - Box -->
                                     </li>
-                                    <!-- End --- nav - dropdown menu - Student - Opportunities -->
+                                    <!-- End ___ nav - dropdown menu - Student - Opportunities -->
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Student - Current Students - Box -->
+                                <!-- End ___ nav - dropdown menu - Student - Current Students - Box -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Student - Current Students -->
+                            <!-- End ___ nav - dropdown menu - Student - Current Students -->
 
                             <!-- Start - nav - dropdown menu - Student - Links -->
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Student - Links -->
+                            <!-- End ___ nav - dropdown menu - Student - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Student - Box -->
+                        <!-- End ___ nav - dropdown menu - Student - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Student -->
+                    <!-- End ___ nav - dropdown menu - Student -->
 
                     <!-- Start - nav - dropdown menu - Alumni -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-user-graduate"></i
+                           ><i class="fas fa-user-graduate"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Alumni</span
+                                   >Alumni</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm24"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm24"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Alumni - Box -->
                         <input type="checkbox" id="sm24" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - Alumni - Stay Connected -->
                             <li>
                                 <a href="#"
-                                    >Stay Connected
+                                   >Stay Connected
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm25"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm25"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Alumni - Stay Connected - Links -->
                                 <input type="checkbox" id="sm25" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1173,24 +1172,24 @@
                                         <a href="#">Clubs - Societies</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Alumni - Stay Connected - Links -->
+                                <!-- End ___ nav - dropdown menu - Alumni - Stay Connected - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Alumni - Stay Connected -->
+                            <!-- End ___ nav - dropdown menu - Alumni - Stay Connected -->
 
                             <!-- Start - nav - dropdown menu - Alumni - Directory -->
                             <li>
                                 <a href="#"
-                                    >Directory
+                                   >Directory
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm26"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm26"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Alumni - Directory - Links -->
                                 <input type="checkbox" id="sm26" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1207,9 +1206,9 @@
                                         <a href="#">Contact</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Alumni - Directory - Links -->
+                                <!-- End ___ nav - dropdown menu - Alumni - Directory - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Alumni - Directory -->
+                            <!-- End ___ nav - dropdown menu - Alumni - Directory -->
 
                             <!-- Start - nav - dropdown menu - Alumni - Links -->
                             <li>
@@ -1230,45 +1229,44 @@
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Alumni - Links -->
+                            <!-- End ___ nav - dropdown menu - Alumni - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Alumni - Box -->
+                        <!-- End ___ nav - dropdown menu - Alumni - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Alumni -->
+                    <!-- End ___ nav - dropdown menu - Alumni -->
 
                     <!-- Start - nav - dropdown menu - Staff -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-users"></i
+                           ><i class="fas fa-users"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Staff</span
+                                   >Staff</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm27"
-                                >▾</label
-                            >
                         </a>
-
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm27"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Staff - Box -->
                         <input type="checkbox" id="sm27" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - Staff - Employment  -->
                             <li>
                                 <a href="#"
-                                    >Employment
+                                   >Employment
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm28"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm28"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Staff - Employment  - Links -->
                                 <input type="checkbox" id="sm28" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1282,24 +1280,24 @@
                                         <a href="#">Human Resources</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Staff - Employment  - Links -->
+                                <!-- End ___ nav - dropdown menu - Staff - Employment  - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Staff - Employment  -->
+                            <!-- End ___ nav - dropdown menu - Staff - Employment  -->
 
                             <!-- Start - nav - dropdown menu - Staff - Benefits -->
                             <li>
                                 <a href="#"
-                                    >Benefits
+                                   >Benefits
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm29"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm29"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Staff - Benefits - Links -->
                                 <input type="checkbox" id="sm29" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1316,24 +1314,24 @@
                                         <a href="#">Retirement</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Staff - Benefits - Links -->
+                                <!-- End ___ nav - dropdown menu - Staff - Benefits - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Staff - Benefits -->
+                            <!-- End ___ nav - dropdown menu - Staff - Benefits -->
 
                             <!-- Start - nav - dropdown menu - Staff - Key Initiatives  -->
                             <li>
                                 <a href="#"
-                                    >Key Initiatives
+                                   >Key Initiatives
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm30"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm30"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Staff - Key Initiatives  - Links -->
                                 <input type="checkbox" id="sm30" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1350,24 +1348,24 @@
                                         <a href="#">Internationalization</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Staff - Key Initiatives  - Links -->
+                                <!-- End ___ nav - dropdown menu - Staff - Key Initiatives  - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Staff - Key Initiatives  -->
+                            <!-- End ___ nav - dropdown menu - Staff - Key Initiatives  -->
 
                             <!-- Start - nav - dropdown menu - Staff - Resources -->
                             <li>
                                 <a href="#"
-                                    >Resources
+                                   >Resources
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm31"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm31"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Staff - Resources - Links -->
                                 <input type="checkbox" id="sm31" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1376,32 +1374,32 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >University Institute For Teaching
+                                           >University Institute For Teaching
                                             And Learning</a
-                                        >
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Employee Self Service</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Staff - Resources - Links -->
+                                <!-- End ___ nav - dropdown menu - Staff - Resources - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Staff - Resources -->
+                            <!-- End ___ nav - dropdown menu - Staff - Resources -->
 
                             <!-- Start - nav - dropdown menu - Community Life -->
                             <li>
                                 <a href="#"
-                                    >Community Life
+                                   >Community Life
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm32"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm32"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Community Life - Links -->
                                 <input type="checkbox" id="sm32" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1415,35 +1413,35 @@
                                         <a href="#">Health And Wellness</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Community Life - Links -->
+                                <!-- End ___ nav - dropdown menu - Community Life - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Community Life -->
+                            <!-- End ___ nav - dropdown menu - Community Life -->
 
                             <!-- Start - nav - dropdown menu - Community Life - Links -->
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Community Life - Links -->
+                            <!-- End ___ nav - dropdown menu - Community Life - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Staff - Box -->
+                        <!-- End ___ nav - dropdown menu - Staff - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Staff -->
+                    <!-- End ___ nav - dropdown menu - Staff -->
 
                     <!-- Start - nav - dropdown menu - Athletics -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-running"></i
+                           ><i class="fas fa-running"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Athletics</span
+                                   >Athletics</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm33"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm33"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Athletics - Box -->
                         <input type="checkbox" id="sm33" />
                         <ul class="nav-dropdown-menu-submenu">
@@ -1461,27 +1459,27 @@
                                 <a href="#">Contact</a>
                             </li>
 
-                            <!-- End --- nav - dropdown menu - Athletics - Links -->
+                            <!-- End ___ nav - dropdown menu - Athletics - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Athletics - Box -->
+                        <!-- End ___ nav - dropdown menu - Athletics - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Athletics -->
+                    <!-- End ___ nav - dropdown menu - Athletics -->
 
                     <!-- Start - nav - dropdown menu - Academics -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-graduation-cap"></i
+                           ><i class="fas fa-graduation-cap"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Academics</span
+                                   >Academics</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm34"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm34"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Academics - Box -->
                         <input type="checkbox" id="sm34" />
                         <ul class="nav-dropdown-menu-submenu">
@@ -1507,39 +1505,44 @@
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Academics - Links -->
+                            <!-- End ___ nav - dropdown menu - Academics - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Academics - Box -->
+                        <!-- End ___ nav - dropdown menu - Academics - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Academics -->
+                    <!-- End ___ nav - dropdown menu - Academics -->
 
                     <!-- Start - nav - dropdown menu - Research -->
                     <li class="nav-dropdown-menu-title-link darkerli">
-                        <a href="#"><i class="fab fa-researchgate"></i><span class="nav-dropdown-menu-text-after-icons">Research</span>
+                        <a href="#"
+                           ><i class="fab fa-researchgate"></i
+                            ><span class="nav-dropdown-menu-text-after-icons"
+                                   >Research</span
+                            >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm35">▾
-                            </label>
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm35"
+                               >▾
+                        </label>
                         <!-- Start - nav - dropdown menu - Research - Box -->
                         <input type="checkbox" id="sm35" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - Research - Directory -->
                             <li>
                                 <a href="#"
-                                    >Publications
+                                   >Publications
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm36"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm36"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Research - Publications - Links -->
                                 <input type="checkbox" id="sm36" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1556,24 +1559,24 @@
                                         <a href="#">Contact</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Research - Publications - Links -->
+                                <!-- End ___ nav - dropdown menu - Research - Publications - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Research - Publications -->
+                            <!-- End ___ nav - dropdown menu - Research - Publications -->
 
                             <!-- Start - nav - dropdown menu - Research - Research Areas -->
                             <li>
                                 <a href="#"
-                                    >Research Areas
+                                   >Research Areas
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm37"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm37"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Research - Research Areas - Links -->
                                 <input type="checkbox" id="sm37" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1585,15 +1588,15 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Distributed Systems and Parallel
+                                           >Distributed Systems and Parallel
                                             Computing</a
-                                        >
+                                            >
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Economics and Electronic
+                                           >Economics and Electronic
                                             Commerce</a
-                                        >
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Education Innovation</a>
@@ -1603,19 +1606,19 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Hardware and Architecture</a
-                                        >
+                                           >Hardware and Architecture</a
+                                            >
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Human-Computer Interaction and
+                                           >Human-Computer Interaction and
                                             Visualization</a
-                                        >
+                                            >
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Information Retrieval and the We</a
-                                        >
+                                           >Information Retrieval and the We</a
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Machine Intelligence</a>
@@ -1631,8 +1634,8 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Natural Language Processing</a
-                                        >
+                                           >Natural Language Processing</a
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Networking</a>
@@ -1645,9 +1648,9 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            >Security, Privacy and Abuse
+                                           >Security, Privacy and Abuse
                                             Prevention</a
-                                        >
+                                            >
                                     </li>
                                     <li>
                                         <a href="#">Software Engineering</a>
@@ -1659,9 +1662,9 @@
                                         <a href="#">Speech Processing</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Research - Research Areas - Links -->
+                                <!-- End ___ nav - dropdown menu - Research - Research Areas - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Research - Research Areas -->
+                            <!-- End ___ nav - dropdown menu - Research - Research Areas -->
                             <!-- Start - nav - dropdown menu - Research - Links -->
                             <li>
                                 <a href="#">Philosophy</a>
@@ -1703,44 +1706,44 @@
                                 <a href="#">Contact</a>
                             </li>
 
-                            <!-- End --- nav - dropdown menu - Research - Links -->
+                            <!-- End ___ nav - dropdown menu - Research - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Research - Box -->
+                        <!-- End ___ nav - dropdown menu - Research - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Research -->
+                    <!-- End ___ nav - dropdown menu - Research -->
 
                     <!-- Start - nav - dropdown menu - Event -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="far fa-calendar-alt"></i
+                           ><i class="far fa-calendar-alt"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Event</span
+                                   >Event</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm38"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm38"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Event - Box -->
                         <input type="checkbox" id="sm38" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - Event - News -->
                             <li>
                                 <a href="#"
-                                    >News
+                                   >News
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm39"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm39"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Event - News - Links -->
                                 <input type="checkbox" id="sm39" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1757,23 +1760,23 @@
                                         <a href="#">For Press</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Event - News - Links -->
+                                <!-- End ___ nav - dropdown menu - Event - News - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Event - News -->
+                            <!-- End ___ nav - dropdown menu - Event - News -->
                             <!-- Start - nav - dropdown menu - Stories -->
                             <li>
                                 <a href="#"
-                                    >Stories
+                                   >Stories
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm40"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm40"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Stories - Links -->
                                 <input type="checkbox" id="sm40" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1790,24 +1793,24 @@
                                         <a href="#">Faculty Stories</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Stories - Links -->
+                                <!-- End ___ nav - dropdown menu - Stories - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Stories -->
+                            <!-- End ___ nav - dropdown menu - Stories -->
 
                             <!-- Start - nav - dropdown menu - Events -->
                             <li>
                                 <a href="#"
-                                    >Events
+                                   >Events
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm41"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm41"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Events - Links -->
                                 <input type="checkbox" id="sm41" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1824,52 +1827,52 @@
                                         <a href="#">Exhibitions</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Events - Links -->
+                                <!-- End ___ nav - dropdown menu - Events - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Events -->
+                            <!-- End ___ nav - dropdown menu - Events -->
 
                             <!-- Start - nav - dropdown menu - Links -->
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Links -->
+                            <!-- End ___ nav - dropdown menu - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Event - Box -->
+                        <!-- End ___ nav - dropdown menu - Event - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Event -->
+                    <!-- End ___ nav - dropdown menu - Event -->
 
                     <!-- Start - nav - dropdown menu - Visit -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-map-marked-alt"></i
+                           ><i class="fas fa-map-marked-alt"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Visit</span
+                                   >Visit</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm42"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm42"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Visit - Box -->
                         <input type="checkbox" id="sm42" />
                         <ul class="nav-dropdown-menu-submenu">
                             <!-- Start - nav - dropdown menu - Visit - Virtual Tour -->
                             <li>
                                 <a href="#"
-                                    >Virtual Tour
+                                   >Virtual Tour
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm43"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm43"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Visit - Virtual Tour - Links -->
                                 <input type="checkbox" id="sm43" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1886,36 +1889,35 @@
                                         <a href="#">Campus 4</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Visit - Virtual Tour - Links -->
+                                <!-- End ___ nav - dropdown menu - Visit - Virtual Tour - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Visit - Virtual Tour -->
+                            <!-- End ___ nav - dropdown menu - Visit - Virtual Tour -->
 
                             <!-- Start - nav - dropdown menu - Visit - Links -->
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Visit - Links -->
+                            <!-- End ___ nav - dropdown menu - Visit - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Visit - Box -->
+                        <!-- End ___ nav - dropdown menu - Visit - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Visit -->
+                    <!-- End ___ nav - dropdown menu - Visit -->
 
                     <!-- Start - nav - dropdown menu - Living -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-house-user"></i
+                           ><i class="fas fa-house-user"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Living</span
+                                   >Living</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm44"
-                                >▾</label
-                            >
                         </a>
-
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm44"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Living - Box -->
                         <input type="checkbox" id="sm44" />
                         <ul class="nav-dropdown-menu-submenu">
@@ -1929,22 +1931,22 @@
                             <li>
                                 <a href="#">For Parents</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Living - Links -->
+                            <!-- End ___ nav - dropdown menu - Living - Links -->
 
                             <!-- Start - nav - dropdown menu - Living - Campus 1 -->
                             <li>
                                 <a href="#"
-                                    >Campus 1
+                                   >Campus 1
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm45"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm45"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Living - Campus 1 - Links -->
                                 <input type="checkbox" id="sm45" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -1976,24 +1978,24 @@
                                         <a href="#">Security - Emergency</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Living - Campus 1 - Links -->
+                                <!-- End ___ nav - dropdown menu - Living - Campus 1 - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Living - Campus 1 -->
+                            <!-- End ___ nav - dropdown menu - Living - Campus 1 -->
 
                             <!-- Start - nav - dropdown menu - Living - Campus 2 -->
                             <li>
                                 <a href="#"
-                                    >Campus 2
+                                   >Campus 2
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm46"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm46"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Living - Campus 2 - Links -->
                                 <input type="checkbox" id="sm46" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -2025,24 +2027,24 @@
                                         <a href="#">Security - Emergency</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Living - Campus 2 - Links -->
+                                <!-- End ___ nav - dropdown menu - Living - Campus 2 - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Living - Campus 2 -->
+                            <!-- End ___ nav - dropdown menu - Living - Campus 2 -->
 
                             <!-- Start - nav - dropdown menu - Living - Campus 3 -->
                             <li>
                                 <a href="#"
-                                    >Campus 3
+                                   >Campus 3
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm47"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm47"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Living - Campus 3 - Links -->
                                 <input type="checkbox" id="sm47" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -2074,24 +2076,24 @@
                                         <a href="#">Security - Emergency</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Living - Campus 3 - Links -->
+                                <!-- End ___ nav - dropdown menu - Living - Campus 3 - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Living - Campus 3 -->
+                            <!-- End ___ nav - dropdown menu - Living - Campus 3 -->
 
                             <!-- Start - nav - dropdown menu - Living - Campus 4 -->
                             <li>
                                 <a href="#"
-                                    >Campus 4
+                                   >Campus 4
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm48"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm48"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Living - Campus 4 - Links -->
                                 <input type="checkbox" id="sm48" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -2123,24 +2125,24 @@
                                         <a href="#">Security - Emergency</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Living - Campus 4 - Links -->
+                                <!-- End ___ nav - dropdown menu - Living - Campus 4 - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Living - Campus 4 -->
+                            <!-- End ___ nav - dropdown menu - Living - Campus 4 -->
 
                             <!-- Start - nav - dropdown menu - Community Life -->
                             <li>
                                 <a href="#"
-                                    >Community Life
+                                   >Community Life
                                     <span class="nav-dropdown-menu-drop-icon"
-                                        >▸</span
-                                    >
-                                    <label
-                                        title="Toggle Drop-down"
-                                        class="nav-dropdown-menu-drop-icon"
-                                        for="sm49"
-                                        >▾</label
-                                    >
+                                          >▸</span
+                                        >
                                 </a>
+                                <label
+                                       title="Toggle Drop-down"
+                                       class="nav-dropdown-menu-drop-icon"
+                                       for="sm49"
+                                       >▾</label
+                                    >
                                 <!-- Start - nav - dropdown menu - Community Life - Links -->
                                 <input type="checkbox" id="sm49" />
                                 <ul class="nav-dropdown-menu-submenu">
@@ -2154,35 +2156,35 @@
                                         <a href="#">Health And Wellness</a>
                                     </li>
                                 </ul>
-                                <!-- End --- nav - dropdown menu - Community Life - Links -->
+                                <!-- End ___ nav - dropdown menu - Community Life - Links -->
                             </li>
-                            <!-- End --- nav - dropdown menu - Community Life -->
+                            <!-- End ___ nav - dropdown menu - Community Life -->
 
                             <!-- Start - nav - dropdown menu - Community Life - Links -->
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Community Life - Links -->
+                            <!-- End ___ nav - dropdown menu - Community Life - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Living - Box -->
+                        <!-- End ___ nav - dropdown menu - Living - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Living -->
+                    <!-- End ___ nav - dropdown menu - Living -->
 
                     <!-- Start - nav - dropdown menu - Giving -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-donate"></i
+                           ><i class="fas fa-donate"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Giving</span
+                                   >Giving</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm50"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm50"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Giving - Box -->
                         <input type="checkbox" id="sm50" />
                         <ul class="nav-dropdown-menu-submenu">
@@ -2214,26 +2216,26 @@
                             <li>
                                 <a href="#">Contact</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Giving - Links -->
+                            <!-- End ___ nav - dropdown menu - Giving - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Giving - Box -->
+                        <!-- End ___ nav - dropdown menu - Giving - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Giving -->
+                    <!-- End ___ nav - dropdown menu - Giving -->
                     <!-- Start - nav - dropdown menu - Gallery -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-photo-video"></i
+                           ><i class="fas fa-photo-video"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Gallery</span
+                                   >Gallery</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm51"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm51"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Gallery - Box -->
                         <input type="checkbox" id="sm51" />
                         <ul class="nav-dropdown-menu-submenu">
@@ -2248,27 +2250,27 @@
                                 <a href="#">Contact</a>
                             </li>
 
-                            <!-- End --- nav - dropdown menu - Gallery - Links -->
+                            <!-- End ___ nav - dropdown menu - Gallery - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Gallery - Box -->
+                        <!-- End ___ nav - dropdown menu - Gallery - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Gallery -->
+                    <!-- End ___ nav - dropdown menu - Gallery -->
 
                     <!-- Start - nav - dropdown menu - Contacts -->
                     <li class="nav-dropdown-menu-title-link darkerlishadowdown">
                         <a href="#"
-                            ><i class="fas fa-id-card"></i
+                           ><i class="fas fa-id-card"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Contacts</span
+                                   >Contacts</span
                             >
                             <span class="nav-dropdown-menu-drop-icon">▾</span>
-                            <label
-                                title="Toggle Drop-down"
-                                class="nav-dropdown-menu-drop-icon"
-                                for="sm52"
-                                >▾</label
-                            >
                         </a>
+                        <label
+                               title="Toggle Drop-down"
+                               class="nav-dropdown-menu-drop-icon"
+                               for="sm52"
+                               >▾</label
+                            >
                         <!-- Start - nav - dropdown menu - Contacts - Box -->
                         <input type="checkbox" id="sm52" />
                         <ul class="nav-dropdown-menu-submenu">
@@ -2279,57 +2281,54 @@
                             <li>
                                 <a href="#">Departments</a>
                             </li>
-                            <!-- End --- nav - dropdown menu - Contacts - Links -->
+                            <!-- End ___ nav - dropdown menu - Contacts - Links -->
                         </ul>
-                        <!-- End --- nav - dropdown menu - Contacts - Box -->
+                        <!-- End ___ nav - dropdown menu - Contacts - Box -->
                     </li>
-                    <!-- End --- nav - dropdown menu - Contacts -->
+                    <!-- End ___ nav - dropdown menu - Contacts -->
 
                     <!-- Start - nav - dropdown menu - Links -->
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-download"></i
+                           ><i class="fas fa-download"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Downloads</span
+                                   >Downloads</span
                             ></a
-                        >
+                            >
                     </li>
                     <li class="nav-dropdown-menu-title-link darkerli">
                         <a href="#"
-                            ><i class="fas fa-search"></i
+                           ><i class="fas fa-search"></i
                             ><span class="nav-dropdown-menu-text-after-icons"
-                                >Search</span
+                                   >Search</span
                             ></a
-                        >
+                            >
                     </li>
-                    <!-- End --- nav - dropdown menu - Links -->
+                    <!-- End ___ nav - dropdown menu - Links -->
                 </ul>
-                <!-- End --- nav - dropdown menu - main -->
+                <!-- End ___ nav - dropdown menu - main -->
 
                 <span class="line"></span>
             </div>
-            <!-- End --- nav - dropdown menu - links -->
+            <!-- End ___ nav - dropdown menu - links -->
         </nav>
-        <article>
             <p>
                 <a href="http://jigsaw.w3.org/css-validator/check/referer">
                     <img
-                        style="border:0;width:88px;height:31px"
-                        src="http://jigsaw.w3.org/css-validator/images/vcss"
-                        alt="Valid CSS!"
-                    />
+                         style="border:0;width:88px;height:31px"
+                         src="http://jigsaw.w3.org/css-validator/images/vcss"
+                         alt="Valid CSS!"
+                         />
                 </a>
             </p>
             <p>
                 <a href="http://jigsaw.w3.org/css-validator/check/referer">
                     <img
-                        style="border:0;width:88px;height:31px"
-                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-                        alt="Valid CSS!"
-                    />
+                         style="border:0;width:88px;height:31px"
+                         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                         alt="Valid CSS!"
+                         />
                 </a>
             </p>
-        </article>
-
     </body>
 </html>
